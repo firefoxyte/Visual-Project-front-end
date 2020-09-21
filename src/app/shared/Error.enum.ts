@@ -1,0 +1,5 @@
+export enum Errors{
+    SERVER_NO_RESPONSE="SERVER_NO_RESPONSE",
+    NOT_FOUND_USER="NOT_FOUND_USER",
+
+}

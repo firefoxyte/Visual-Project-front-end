@@ -1,0 +1,94 @@
+modèles: 
+- taches: 
+    - id
+    - parent id (si null = debut projet)
+    - project id (null si début de projet)
+    - sous taches tab d'id
+    - nom de tache
+    - description
+    - temps (timer)
+    - date start
+    - date end 
+    - groupes id (héritage si rien mis)
+    - creation date
+    - creator
+    - state
+    - color 
+    - tags
+    
+- groupes:
+    - id
+    - name
+    - id user
+    - droits (ensemble)
+
+- users
+    -  id
+    - surnom
+    - email
+    - pswd
+    
+- droits
+    - ajout ,suppression de personnes 
+    - ajout , suppression de droits sur personne
+    - creer taches
+    - modif taches
+    - supp taches
+
+- state:
+    - en cours
+    - terminé
+    - annulé
+
+
+------------------- focntionnalités
+visualisation d'un projet ou d'un ensemble de taches
+- arborescence
+- calendrier?? comment
+- liste ordonné par filtre
+-arbo liste
+- details de selection
+- filtre (color,etat,tags,date , creator, groupe)
+------------------
+creation , mofication de taches => champs taches + controles personnes et droits
+suppression de taches
+------------------
+envoie de mail
+--------
+escpace commun et personnel
+- perso = mes taches (present, crée,droit)
+- commun = tout 
+-------
+incription, connexion , suppression de compte
+----------
+upload et download pour exportation de données de projet ( permet analyse)
+--------
+avoir une liste de collabo pour faciliter la fabrication de groupe, 
+utilisation de mail pour retrouver ou chercher un collab 
+- pour trouver les collab voir  les groupes de travail
+------------ requtages
+besoin et type de requetes:
+- les collaborateurs déjà connu ( doit faire une arborescence des projets,prendre les groupes,puis les personnes,supprimez les doublons ) 
+- liste projet auquel on participe ( les groupes ou il est , puis regarde les taches ou il est et remonte jusqu'au null)
+- liste des taches ( les groupes ou il est , puis regarde les taches)
+- vision arborescente de projet ou taches à partir d'une tache ou projet,option de choix du referentiel(
+    si projet alors look id projet et cherche taches avec id projet puis reconstruction,
+    si tache pareil reste à savoir si veut uniquement voir bas ou haut aussi)
+- vision liste, doit être fait en fct d'une tache, doit pouvoir descendre ou remonter, possibilité de voir la liste de ss-tache mais aussi sur laquelle on peut aller
+- vision calendrier diagramme de gant avec liste de tache sur le coté (
+    les taches trouver à cette etape doit prendre toute l'arborscence  pour mettre la date la plus lointaine des ss-taches et la plus vieille)
+
+
+--------- affichages----- 
+  --    projects --
+        besoin : tabview,treetable,tree/org chart,table,,fieldset,
+
+----- problemes à résoudre ---
+communication entre modules ?
+eviter la destruction d'un composant ?
+
+----------12/09
+voir :
+- login(*1) avec fake connexion, maj du menu
+peut être routing pour utilisation et éviter maj menu
+-*1 les formulaires et les validations de champs

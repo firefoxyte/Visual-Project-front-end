@@ -1,0 +1,14 @@
+"schematics": {
+        "@schematics/angular:component": {
+          "path": "/src/app"
+        }
+      },
+-----------
+inejction mm service
+- sans rien le fait à la racine
+- composant dans composant?
+- module?
+- lazy loaded?
+- encapsulation et injection par un composant?
+- en lazy a sa propre DI branch donc doit être fait à la racine
+avec un module partager

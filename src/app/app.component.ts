@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'todo';
+  ColByRaw =12;
+  ColBoard = 6;
+  ColProjects = 3;
+  ColDetails =3;
 }

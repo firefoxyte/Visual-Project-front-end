@@ -1,0 +1,19 @@
+<div class="loginCompoenent">
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="p-grid">
+      
+        <div class="p-col-12 p-grid">
+            <label for="email" class="p-col-4 p-offset-4">Email:</label>
+            <div class="p-col-4"></div>
+            <input id="email"  class="p-col-4  p-offset-4" type="email " pInputText formControlName="email"> 
+        </div>
+        
+        <div class="p-col-12 p-grid">
+            <label for="password" class="p-col-4  p-offset-4">Password:</label>
+            <div class="p-col-4"></div>
+            <input id="password" class="p-col-4  p-offset-4" type="password" pInputText formControlName="password"> 
+        </div>
+        <div class="p-col-12 red">
+            <button  pButton label="Submit" type="submit" class="p-col-4 submit" [disabled]="!loginForm.valid"></button>
+        </div>
+    </form>
+</div>

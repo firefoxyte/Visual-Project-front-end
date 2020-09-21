@@ -1,0 +1,15 @@
+*{
+    margin:0px;
+    padding:0px;
+}
+
+.interface{
+    height: 93%;
+}
+.border{
+    border: 3px solid black;
+    height: 100%;
+}
+.hidden{
+    display: none;
+}

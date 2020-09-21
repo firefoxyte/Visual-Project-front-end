@@ -1,0 +1,22 @@
+div.loginCompoenent{
+      margin:auto;
+      padding:auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+}
+  
+form{
+      border: 1px solid blue;
+      
+}
+  
+.red{
+    
+    border: 1px solid red;
+}
+.submit{
+    padding-left:0px;
+    margin-left: 32%;
+}
